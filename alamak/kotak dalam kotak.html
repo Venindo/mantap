@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid green;
+            margin: 30px;
+            background-color: lightblue;
+        }
+        .box{
+            position: relative;
+            left: 0px;
+            transition: left 0.5s ease;
+        }
+        .box:hover{
+            left: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 10x;
+            cursor: pointer;
+            background-color: lightcoral;
+            border: none;
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+        .button:hover {
+            background-color: darkred;
+            color: yellow;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease;
+            animation: putar 4s linear infinite;
+        }
+        @keyframes putar {
+            from { transform: rotate(0deg); 
+            }
+            to { transform: rotate(360deg);
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>contoh CSS Box model</h1>
+    <button class="button">Hover saya</button>
+    <div class="box">
+        ini adalah kotak deangan :
+        <ul>
+            <li>padding 20px</li>
+            <li>border 5px waena hijau</li>
+            <li>margin 30px</li>
+        </ul>
+        <h1>contoh CSS Box model</h1>
+    <button class="button">Hover saya</button>
+    <div class="box2">
+        :3
+        
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pengenalan javascript </title>
+</head>
+<body>
+    <h1 id="judul">halo dunia</h1>
+    <button onclick="konfirmasi()">klik untuk konfirmasi</button>
+        <button onclick="tomblo2()">reset</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tomblo2() {
+            document.getElementById("hasil").innerHTML = "";
+        }
+    </script>
+
+    <script>
+        function konfirmasi() {
+            let jawaban = confirm("apakah anda yakin ?");
+            if (jawaban === true) {
+                document.getElementById("hasil").textContent = "anda menekan tombol ok";
+            } else {
+                document.getElementById("hasil").textContent = "anda menekan tombol cancel";
+            }
+        }
+    </script>
+
+    
+    <script>
+        function tomblo2() {
+            let jawaban = confirm("apakah anda yakin ?");
+            if (jawaban === true) {
+                document.getElementById("hasil").textContent = "anda menekan tombol reset";
+            } else {
+                document.getElementById("hasil").textContent = "anda menekan tombol cancel";
+            }
+        }
+    </script>
+    
+    <Script></Script>
+        <input type="checkbox" name="syarat"> Saya setuju dengan syarat & ketentuan<br><br>
+        
+
+
+
+</body>
+</html>

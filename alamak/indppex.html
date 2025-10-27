@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Latihan</title>
+  <style>
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #b90a36;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #555;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start; /* dipindah ke kiri */
+  padding: 0 20px; /* jarak dari tepi */
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+nav ul li a:hover {
+  background: #333;
+}
+
+.container {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main {
+  flex: 3;
+  padding: 20px;
+  background: #f9f9f9;
+  min-width: 280px;
+}
+aside {
+  flex: 1;
+  padding: 20px;
+  background: #bb1010;
+  transition: transform 0.5s ease;
+  min-width: 200px;
+  color: #fff;
+}
+aside:hover {
+  transform: translateX(20px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #990808;
+  color: white;
+}
+
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-top: 8px;
+}
+input[type="text"],
+input[type="email"],
+select,
+button {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: darkgreen;
+}
+
+footer {
+  background: #6aa84f;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+    <p>Membuat gabungan antara HTML dan CSS</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2>Konten Utama</h2>
+      <p>Selamat datang di website untuk belajar Web Design dimana gabungan antara HTML dan CSS.</p>
+      <img src="https://www.unklab.ac.id/wp-content/uploads/2023/01/pic-for-sejarah.jpg" alt="Gambar Sejarah" style="max-width:100%;height:auto;">
+
+      <h3>Tabel Data</h3>
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Kota</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Andi</td>
+          <td>Jakarta</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Budi</td>
+          <td>Bandung</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Willem</td>
+          <td>Manado</td>
+        </tr>
+      </table>
+
+      <h3>Formulir Pendaftaran</h3>
+      <form action="completed.html" method="get" id="registrationForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="kota">Pilih Kota:</label>
+        <select id="kota" name="kota" required>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Manado">Manado</option>
+        </select>
+
+        <div style="margin-top:8px;">
+          <input type="checkbox" id="syarat" name="syarat">
+          <label for="syarat" style="display:inline;">Saya menyetujui syarat & ketentuan</label>
+        </div>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </main>
+
+    <aside>
+      <h3>Tentang Website</h3>
+      <p>Website ini adalah contoh latihan HTML & CSS responsive sederhana dengan animasi.</p>
+      <h4>Menu Sidebar</h4>
+      <ul>
+        <li><a href="#" style="color:inherit;text-decoration:underline;">Beranda</a></li>
+        <li><a href="#" style="color:inherit;text-decoration:underline;">Tentang</a></li>
+        <li><a href="#" style="color:inherit;text-decoration:underline;">Kontak</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Website Latihan</p>
+  </footer>
+
+  <script>
+    (function () {
+      const checkbox = document.querySelector('input[name="syarat"]');
+      const form = document.getElementById('registrationForm');
+      const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+
+      if (!checkbox || !form || !submitBtn) return;
+
+      checkbox.addEventListener('change', function () {
+        if (this.checked) {
+          alert('Anda telah menyetujui syarat & ketentuan.');
+        }
+      });
+
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (!checkbox.checked) {
+          alert('Anda harus menyetujui syarat & ketentuan terlebih dahulu.');
+          return;
+        }
+
+        const confirmed = confirm('Apakah Anda yakin ingin mengirim data? (OK = Kirim, Cancel = Batal)');
+        if (confirmed) {
+          alert('Formulir berhasil dikirim!');
+          
+        } else {
+          alert('Pengiriman dibatalkan.');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

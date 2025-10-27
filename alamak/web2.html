@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout website</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+    }
+    header {
+        background-color: blue;
+        color: blanchedalmond;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav {
+        background-color: rgb(248, 159, 76);
+        overflow: hidden;
+    }
+    nav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    nav a:hover {
+        background-color: lightblue;
+        color: green;
+    }
+    .container {
+        display: flex;
+        margin: 20px;
+    }
+    .content {
+        flex: 3;
+        padding: 20px;
+        background-color: lightgray;
+        margin-right: 20px;
+    }
+    .sidebar {
+        flex: 1;
+        padding: 20px;
+        background-color: lightblue;
+    }
+    footer {
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            margin: 10px;
+        }
+        .content, .sidebar {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>welcome stieven to my website</h1>
+        <p>This is a simple layout example</p>
+    </header>
+    <nav>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">service</a>
+        <a href="#">kontak</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>main content area</h2>
+            <p>ini adalah isi dari website saya</p>
+        </div>
+        <div class="sidebar">
+            <h3>ini adalah halaman</h3>
+            <ul>
+                <li>menu samping 1</li>
+                <li>menu samping 2</li>
+                <li>menu samping 3</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>stieven itu ganteng tapi tidak ada cewek</p>
+    </footer>
+</body>
+
+</html>

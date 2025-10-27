@@ -1,0 +1,19 @@
+{
+  "name": "js-animation-app",
+  "version": "1.0.0",
+  "description": "A simple JavaScript animation app that asks the user if they want to be my girlfriend.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "javascript",
+    "animation",
+    "app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
